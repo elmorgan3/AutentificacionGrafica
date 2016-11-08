@@ -1,0 +1,9 @@
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\bin\Debug\Autentificacion Grafica.exe.config
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\bin\Debug\Autentificacion Grafica.exe
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\bin\Debug\Autentificacion Grafica.pdb
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\obj\Debug\Autentificacion Grafica.csprojResolveAssemblyReference.cache
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\obj\Debug\Autentificacion_Grafica.Form1.resources
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\obj\Debug\Autentificacion_Grafica.Properties.Resources.resources
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\obj\Debug\Autentificacion Grafica.csproj.GenerateResource.Cache
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\obj\Debug\Autentificacion Grafica.exe
+C:\Users\Morgan\Desktop\C#\Autentificacion Grafica\Autentificacion Grafica\obj\Debug\Autentificacion Grafica.pdb

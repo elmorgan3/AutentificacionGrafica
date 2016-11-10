@@ -10,11 +10,12 @@ namespace Autentificacion_Grafica
     class ClassCalcularHashConPassYSalt
     {
         // PORQUE SE TIENE QUE PONER EL STATIC?????????????????????????????????
+        //Se pone porque asin no hace falta crear un objeto de la clase osea un new
         public static string CrearHash(string contrasena, byte[] salt)
         {
             try
             {
-                //calculamos el hash con el password y el sal juntos
+                //calculamos el hash con el password y el salt juntos
                 var pbkdf2 = new Rfc2898DeriveBytes(contrasena, salt, 10000);
                 byte[] hash = pbkdf2.GetBytes(32);
 

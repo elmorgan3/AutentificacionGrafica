@@ -22,7 +22,7 @@ namespace Autentificacion_Grafica
         //Creamos una variable donde guardamos el nombre que tendra el archivo,
         //en el que guardaremos los datos de los usarios
         //PORQUE HAY QUE PONER CONST????????????????????
-        public const string archivoUsuarios = "usarios.txt";
+        public const string archivoUsuarios = "usuarios.txt";
 
 
         public Form1()

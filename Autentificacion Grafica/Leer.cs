@@ -13,18 +13,29 @@ namespace Autentificacion_Grafica
         {
             try
             {
-                using (StreamReader sr = new StreamReader(Form1.archivoUsuarios))
+                using (StreamReader sr = new StreamReader("usuarios.txt"))
                 {
-                    string linea = sr.ReadToEnd();
+                    //Declaro esta variable donde se guardara cada linea del archivo
+                    string linia;
+
+                    //Declaro una array para llenarla con el nombre del usuario,salt y hash. Separadas por ,
+                    string[] user;
+
+                    //Este while lee una linea del archivo por cada vuelta
+                    while ((linia = sr.ReadLine()) != null)
+                    {
+                        //metemos en esta array lo que haya antes de la primera ',' en este caso el nombre del usuario
+                        user = linia.Split(',');
+                    }
                     
-                    // retorn d'usuari no trobat
-                    return "noEncontrado";            
+
+                    return "noEncontrado";
 
                 }
             }
             catch
             {
-                // Retornem null per indicar que no s'ha pogut llegir el fitxer
+                //Devolvemos un null para decir que se a producido un error al leer el archivo
                 return null;
             }
         }

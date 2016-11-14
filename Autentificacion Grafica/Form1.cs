@@ -81,9 +81,45 @@ namespace Autentificacion_Grafica
             
         }
 
+        //Este metodo coge los valores de texBoxNombre y textBoxContrasena y llama al 
+        //metodo autentificar de la clase Iniciar
         private void buttonIniciar_Click(object sender, EventArgs e)
         {
+            //Comprobamos que no haya dejado campos vacios el usuario
+            if (textBoxNombre.Text == "" || textBoxContrasena.Text == "")
+            {
+                //Mostramos un mensaje advirtiendo que hay un campo vacio
+                MessageBox.Show("Tiene que rellenar los dos campos");
+            }
 
+            else
+            {
+                //Ponemos en dos variables lo introducido en los textBox
+                nombre = textBoxNombre.Text;
+
+                contrasena = textBoxContrasena.Text;
+
+                //Los llamamos a un metodo static de otra clase para que compruebe si existe el usuario y crearlo
+                string respuesta = Iniciar.autentificar(nombre, contrasena);
+
+                if (respuesta == "usuarioAutentificado")
+                {
+                    MessageBox.Show("El usuario autentificado");
+                }
+                else if (respuesta == "noEncontrado")
+                {
+                    MessageBox.Show("El nombre de usuario no existe");
+                }
+                else if (respuesta == "contraNoCoincide")
+                {
+                    MessageBox.Show("La contraseña no coincide");
+                }
+                
+            }
+
+            //Vaciamos los dos textBox
+            textBoxNombre.Text = "";
+            textBoxContrasena.Text = "";
         }
 
 

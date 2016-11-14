@@ -12,10 +12,10 @@ namespace Autentificacion_Grafica
         
         public static string crearLogin (string nombre, string contrasena)
         {
-
-            string apartado = Leer.LeerUsuario(nombre);
+            //Llamamos a la clase 'Leer' para leer el archivo
+            string respuestaArchivo = Leer.LeerUsuario(nombre);
             
-            if (apartado =="noEncontrado")
+            if (respuestaArchivo =="noEncontrado")
             {
                 //declaramos el salt en byte
                 byte[] salt;
@@ -44,7 +44,7 @@ namespace Autentificacion_Grafica
             }
 
             //Devolvemos que a habido un problema al leer el archivo
-            else if (apartado == null)
+            else if (respuestaArchivo == null)
             {
                 return null;
             }

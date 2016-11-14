@@ -41,16 +41,20 @@ namespace Autentificacion_Grafica
         //metodo crearLogin de la clase Registrar 
         private void buttonRegistrarse_Click(object sender, EventArgs e)
         {
+            //Comprobamos que no haya dejado campos vacios el usuario
             if (textBoxNombre.Text == "" || textBoxContrasena.Text == "")
             {
+                //Mostramos un mensaje advirtiendo que hay un campo vacio
                 MessageBox.Show("Tiene que rellenar los dos campos");
             }
             else
             {
+                //Ponemos en dos variables lo introducido en los textBox
                 nombre = textBoxNombre.Text;
 
                 contrasena = textBoxContrasena.Text;
 
+                //Los llamamos a un metodo static de otra clase para que compruebe si existe el usuario y crearlo
                 string respuesta = Registrar.crearLogin(nombre, contrasena);
                 
                 if (respuesta == "creado")
@@ -65,7 +69,15 @@ namespace Autentificacion_Grafica
                 {
                     MessageBox.Show("Se ha producido un error al crear el hash");
                 }
+                else if (respuesta == null)
+                {
+                    MessageBox.Show("Se ha producido un error al leer el archivo");
+                }
             }
+
+            //Vaciamos los dos textBox
+            textBoxNombre.Text = "";
+            textBoxContrasena.Text = "";
             
         }
 

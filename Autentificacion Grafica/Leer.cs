@@ -19,19 +19,25 @@ namespace Autentificacion_Grafica
                     string linia;
 
                     //Declaro una array para llenarla con el nombre del usuario,salt y hash. Separadas por ,
-                    string[] user;
+                    string[] usuario;
 
                     //Este while lee una linea del archivo por cada vuelta
                     while ((linia = sr.ReadLine()) != null)
                     {
                         //metemos en esta array lo que haya antes de la primera ',' en este caso el nombre del usuario
-                        user = linia.Split(',');
+                        usuario = linia.Split(',');
+
+                        //Se podria poner equals 
+                        //compruebo si lo primero que hay antes de la primera ',' es igual al nombre introducido
+                        if (usuario[0] == nombre)
+                        {
+                            //Ahora devolvemos el nombre del usuario
+                            //Tambien devolvemos el salt y el hash para la parte de autentificacion
+                            return usuario[0] + ',' + usuario[1] + ',' + usuario[2];
+                        }
                     }
-                    
-
-                    return "noEncontrado";
-
                 }
+                return "noEncontrado";
             }
             catch
             {

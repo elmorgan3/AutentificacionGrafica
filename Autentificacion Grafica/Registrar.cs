@@ -42,6 +42,14 @@ namespace Autentificacion_Grafica
                     return "creado";
                 }
             }
+
+            //Devolvemos que a habido un problema al leer el archivo
+            else if (apartado == null)
+            {
+                return null;
+            }
+
+            //Devolvemos un texto diciendo que el usuario indicado ya existe 
             else
             {
                 return "existe";

@@ -96,7 +96,6 @@ namespace Autentificacion_Grafica
             {
                 //Ponemos en dos variables lo introducido en los textBox
                 nombre = textBoxNombre.Text;
-
                 contrasena = textBoxContrasena.Text;
 
                 //Los llamamos a un metodo static de otra clase para que compruebe si existe el usuario y crearlo
@@ -104,7 +103,7 @@ namespace Autentificacion_Grafica
 
                 if (respuesta == "usuarioAutentificado")
                 {
-                    MessageBox.Show("El usuario autentificado");
+                    MessageBox.Show("Usuario autentificado");
                 }
                 else if (respuesta == "noEncontrado")
                 {
